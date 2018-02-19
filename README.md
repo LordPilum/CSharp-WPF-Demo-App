@@ -20,7 +20,8 @@ NUGETS
   - JSON and Newtonsoft.Json
   - MOngoDB.Driver, MongoDBBson, MongoDB.Driver.Core
   - MvvmDialogs
-  - Xceed.Wpf.Toolkit, Xceed.Wpf.DataGrind
+  - Xceed.Wpf.Toolkit, Xceed.Wpf.DataGrid
+  - log4net
 
 # 2. MongoDB
   Once you have installed MongoDB, you would need to configure the access, as well as where the data is located.
