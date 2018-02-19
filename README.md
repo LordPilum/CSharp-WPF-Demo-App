@@ -17,10 +17,10 @@ Simple WPF App &amp; MongoDB &amp; Design Patterns
 
 NUGETS
   In order to support, C# WPF, MongoDB, or data manimlation functionalities and ease the development process. I have used in this         solution the following nuget libraries:
-  A. JSON and Newtonsoft.Json
-  B. MOngoDB.Driver, MongoDBBson, MongoDB.Driver.Core
-  C. MvvmDialogs
-  D. Xceed.Wpf.Toolkit, Xceed.Wpf.DataGrind
+  - JSON and Newtonsoft.Json
+  - MOngoDB.Driver, MongoDBBson, MongoDB.Driver.Core
+  - MvvmDialogs
+  - Xceed.Wpf.Toolkit, Xceed.Wpf.DataGrind
 
 # 2. MongoDB
   Once you have installed MongoDB, you would need to configure the access, as well as where the data is located.
