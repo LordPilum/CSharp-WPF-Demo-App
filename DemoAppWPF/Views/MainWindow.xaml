@@ -1,0 +1,73 @@
+﻿<Window x:Name="MainWindowRenderer"
+        x:Class="DemoAppWPF.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="https://github.com/fantasticfiasco/mvvm-dialogs"
+        md:DialogServiceViews.IsRegistered="True"
+        mc:Ignorable="d"
+        Title="{Binding Title}"
+        ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Width="480" Height="600">
+
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <!--Top Panel-->
+            <Canvas Height="50" Margin="0,5,0,0">
+                <Button x:Name="Search_Button" Width="40" Height="40" BorderBrush="White" Margin="50,5,0,0">
+                    <Button.Background>
+                        <ImageBrush ImageSource= "/Resources/Images/Main/search_with_pc_button_picture.png" />
+                    </Button.Background>
+                </Button>
+
+                <TextBox x:Name="SearchField" Height="40" Width="200" TextWrapping="Wrap" Margin="125,5,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FlowDirection="RightToLeft" Grid.IsSharedSizeScope="True"/>
+
+                <Button x:Name="Add_Button" Width="40" Height="40" BorderBrush="White" Margin="400,5,0,0">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Resources/Images/Main/add_new_entry_button_picture.png" />
+                    </Button.Background>
+                </Button>
+            </Canvas>
+            
+            <!--Table Rendering-->
+            <Canvas Height="250">
+                <ListView x:Name="DisplayListView" Height="250" Width="300" VerticalAlignment="Center" HorizontalAlignment="Center" Canvas.Left="90">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn DisplayMemberBinding="{Binding FullName}" Width="100"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Age}" Width="100"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Country}" Width="100"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Canvas>
+
+            <!--Labels and TextBox Rendering-->
+            <Canvas Height="150" Width="480">
+                <Label x:Name="FullNameLabel" Canvas.Left="90" Canvas.Top="20" RenderTransformOrigin="-0.951,-0.172" Height="30" Width="70"/>
+                <TextBox x:Name="FullNameTextBox" Canvas.Left="191" Canvas.Top="20" Height="30" TextWrapping="Wrap" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="200"/>
+                <Label x:Name="AgeLabel" Canvas.Left="90" Canvas.Top="60" RenderTransformOrigin="-0.951,-0.172" Height="30" Width="70"/>
+                <TextBox x:Name="AgeTextBox" Canvas.Left="190" Canvas.Top="60" Height="30" TextWrapping="Wrap" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="200"/>
+                <Label x:Name="CountryLabel" Canvas.Left="90" Canvas.Top="100" RenderTransformOrigin="-0.951,-0.172" Height="30" Width="70"/>
+                <TextBox x:Name="CountryTextBox" Canvas.Left="190" Canvas.Top="100" Height="30" TextWrapping="Wrap" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="200"/>
+            </Canvas>
+
+            <!--Delete & Save/Update Panel-->
+            <Canvas Height="115" Width="480" Margin="0,0,0,0">
+                <Button x:Name="Delete_Button" Width="40" Height="40" BorderBrush="White" Margin="150,25,0,0">
+                    <Button.Background>
+                        <ImageBrush ImageSource= "/Resources/Images/Main/delete_entry_button_picture.png" />
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="Update_Button" Width="40" Height="40" BorderBrush="White" Margin="290,25,0,0">
+                    <Button.Background>
+                        <ImageBrush ImageSource= "/Resources/Images/Main/update_entry_button_picture.png" />
+                    </Button.Background>
+                </Button>
+            </Canvas>
+
+        </StackPanel>
+
+    </DockPanel>
+</Window>
