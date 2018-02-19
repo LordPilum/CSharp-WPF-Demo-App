@@ -26,23 +26,22 @@ NUGETS
 # 2. MongoDB
   Once you have installed MongoDB, you would need to configure the access, as well as where the data is located.
 
-  To do this, create a file locally, named mongod.cfg. This will include setting path to the data folder for MongoDB server, as well as   to the MongoDB log file, initially without any authentication. Please update these local paths, with your own settings:
-  
-[Settings]
-  {
-  systemLog:
-    destination: file
-    path: "C:\\tools\\mongodb\\db\\log\\mongo.log"
-    logAppend: true
-  storage:
-    dbPath: "C:\\tools\\mongodb\\db\\data"
-  }
+  To do this, create a file locally, named mongod.cfg. This will include setting path to the data folder for MongoDB server, as well as   to the MongoDB log file, initially without any authentication. Please update these local paths, with your own settings:  
+  - [Settings]
+    {
+        systemLog:
+          destination: file
+          path: "C:\\tools\\mongodb\\db\\log\\mongo.log"
+          logAppend: true
+        storage:
+          dbPath: "C:\\tools\\mongodb\\db\\data"
+    }
   
   Run in command prompt next line. This will start the MongoDB server, pointing to the configuration file already created (in case the     server is installed in a custom folder, please update first the command):
-[Command Line]
-  {
-    "C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe" --config C:\Dev\Data.Config\mongod.cfg
-  }
+  - [Command Line]
+    {
+        "C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe" --config C:\Dev\Data.Config\mongod.cfg
+    }
   
   Once the server is started (and you could see the details in the log file), run mongo.exe in command prompt. The next step is to add     the administrator user to the database. Run mongodb with the full path (ex: “C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe”).
   
