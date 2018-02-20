@@ -37,7 +37,7 @@ Simple WPF App &amp; MongoDB &amp; Design Patterns(DI, Factory, CRUD, Layer; DAL
       }
   
   Run in command prompt next line. This will start the MongoDB server, pointing to the configuration file already created (in case the     server is installed in a custom folder, please update first the command):
-  - [Command Line]
+  ### [Command Line]
     { 
          "C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe" --config C:\Dev\Data.Config\mongod.cfg 
      }
@@ -55,20 +55,20 @@ Simple WPF App &amp; MongoDB &amp; Design Patterns(DI, Factory, CRUD, Layer; DAL
   - WPF APP, responsible for rendering, and managing the information details about a Person. 
   
 ### Solution Project
-   - DAL             -> DataAccess
-     -- CRUD
-     -- DTO
-   - BAL             -> DataLogic
-      -- BusinessLogic
-      -- CMS  
-   - WPF App         -> Desktop APP 
-      -- Controls
-      -- Models
-      -- Resources
-      -- Utils
-      -- ViewModels
-      -- Views
-   - UnitTesting      -> Testing (*still to implement)
+* DAL             -> DataAccess
+  ** CRUD
+  ** DTO
+* BAL             -> DataLogic
+  ** BusinessLogic
+  ** CMS  
+* WPF App         -> Desktop APP 
+  ** Controls
+  ** Models
+  ** Resources
+  ** Utils
+  ** ViewModels
+  ** Views
+* UnitTesting      -> Testing (*still to implement)
     
 # 4. Resources
   - http://api.mongodb.com/csharp/current/html/R_Project_CSharpDriverDocs.htm
